@@ -1,5 +1,5 @@
 FROM php:7.2-apache
-RUN requirements="libxslt-dev libldap2-dev libmcrypt-dev libpq-dev libxml2-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev libtidy-dev" \
+RUN requirements="libxslt-dev libldap2-dev libmcrypt-dev libpq-dev libxml2-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev libtidy-dev unzip git" \
     && apt-get update && apt-get install -y $requirements \
     && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib \
     && docker-php-ext-install -j$(nproc) iconv \
@@ -24,6 +24,8 @@ RUN docker-php-ext-install mbstring \
 
 RUN pecl install xdebug-2.6.0
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 RUN apt-get update -y \
   && apt-get install -y \
      libxml2-dev \
@@ -35,5 +37,9 @@ ADD ./docker/php_config/php-extras.ini /usr/local/etc/php/conf.d/php-extras.ini
 ADD ./docker/apache_config/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod rewrite
+
+WORKDIR /var/www/html/project
+
+RUN composer i
 
 EXPOSE 81
