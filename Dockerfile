@@ -42,4 +42,6 @@ WORKDIR /var/www/html/project
 
 RUN composer i
 
-EXPOSE 81
+RUN composer dump -o
+
+EXPOSE 8000

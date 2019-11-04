@@ -7,10 +7,11 @@ services:
    volumes:
      - ./project:/var/www/html/project
      - ./docker/apache_config:/etc/apache2/sites-available
+     - ./project/vendor:/var/www/html/project/vendor
      - ./docker/logs:/var/log/apache2
      - ./docker/php_config/php-extras.ini:/usr/local/etc/php/conf.d/php-extras.ini
    ports:
-     - '81:80'
+     - '8000:80'
    restart: always
 networks:
   default:
