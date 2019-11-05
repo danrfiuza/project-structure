@@ -4,6 +4,7 @@ services:
    build:
      context: .
      dockerfile: Dockerfile
+   container_name: php72
    volumes:
      - ./project:/var/www/html/project
      - ./docker/apache_config:/etc/apache2/sites-available
