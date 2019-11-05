@@ -32,6 +32,10 @@ RUN apt-get update -y \
   && apt-get clean -y \
   && docker-php-ext-install soap
 
+
+# Install CodeSniffer
+RUN pear install PHP_CodeSniffer
+
 ADD ./project /var/www/html/project
 ADD ./docker/php_config/php-extras.ini /usr/local/etc/php/conf.d/php-extras.ini
 ADD ./docker/apache_config/000-default.conf /etc/apache2/sites-available/000-default.conf
