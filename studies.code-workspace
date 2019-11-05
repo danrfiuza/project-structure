@@ -5,6 +5,38 @@
 		}
 	],
 	"settings": {
-		"php.executablePath": "${workspaceFolder}/docker/php"
-	}
+		"php.executablePath": "/usr/local/bin/php",
+		"editor.accessibilitySupport": "on",
+		"git.autofetch": true,
+		"files.associations": {
+			"*.inc": "php"
+		},
+		"editor.mouseWheelZoom": true,
+		"workbench.colorTheme": "Material Theme Darker High Contrast",
+		"workbench.colorCustomizations": {
+			"activityBarBadge.background": "#64FFDA",
+			"list.activeSelectionForeground": "#64FFDA",
+			"list.inactiveSelectionForeground": "#64FFDA",
+			"list.highlightForeground": "#64FFDA",
+			"scrollbarSlider.activeBackground": "#64FFDA50",
+			"editorSuggestWidget.highlightForeground": "#64FFDA",
+			"textLink.foreground": "#64FFDA",
+			"progressBar.background": "#64FFDA",
+			"pickerGroup.foreground": "#64FFDA",
+			"tab.activeBorder": "#64FFDA",
+			"notificationLink.foreground": "#64FFDA",
+			"editorWidget.resizeBorder": "#64FFDA",
+			"editorWidget.border": "#64FFDA",
+			"settings.modifiedItemIndicator": "#64FFDA",
+			"settings.headerForeground": "#64FFDA",
+			"panelTitle.activeBorder": "#64FFDA",
+			"breadcrumb.activeSelectionForeground": "#64FFDA",
+			"menu.selectionForeground": "#64FFDA",
+			"menubar.selectionForeground": "#64FFDA",
+			"editor.findMatchBorder": "#64FFDA",
+			"selection.background": "#64FFDA40"
+		},
+		"materialTheme.accent": "Bright Teal",
+		"workbench.iconTheme": "material-icon-theme"
+	},
 }
