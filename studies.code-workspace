@@ -5,6 +5,6 @@
 		}
 	],
 	"settings": {
-		"php.executablePath": "/usr/local/bin/php"
+		"php.executablePath": "${workspaceFolder}/docker/php"
 	}
 }

@@ -5,6 +5,14 @@
 
 ### Steps to run it:
 
+* Inside project-structure
+```
+docker-compose build
+```
+
+```
+docker-compose up
+```
 * Copy php project files to project folder
 * Copy docker/php to /usr/local/bin and give the chmod +x permission to it
 * test php executable path using command "php -v"
